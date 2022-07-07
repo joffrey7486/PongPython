@@ -115,3 +115,9 @@ while True:
     if (ball.xcor() < -340 and ball.xcor() < -350) and (ball.ycor() < player1.ycor() + 45 and ball.ycor() > player1.ycor() -45):
         ball.setx(-340)
         ball.dx *= -1
+
+    # IA Joueur
+    if (player2.ycor() < ball.ycor()) and abs(player2.ycor() - ball.ycor()) > 10:
+        player2_up()
+    elif (player2.ycor() > ball.ycor()) and abs(player2.ycor() - ball.ycor()) > 10:
+        player2_down()
